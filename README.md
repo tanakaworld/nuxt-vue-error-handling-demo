@@ -2,6 +2,13 @@
 
 > Demo project about error handling in Nuxt/Vue
 
+## Set up sentry
+
+```
+# copy and set DSN url
+$ cp .env.sample .env
+```
+
 ## Build Setup
 
 ``` bash
