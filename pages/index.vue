@@ -31,6 +31,11 @@ export default {
   },
   mounted() {
     console.log(this.$sentry)
+    this.$sentry.setUserContext({
+      user: {
+        name: 'tanakaworld'
+      }
+    })
   }
 }
 </script>
