@@ -1,3 +1,4 @@
+require('dotenv').config()
 const pkg = require('./package')
 
 module.exports = {
@@ -14,8 +15,14 @@ module.exports = {
   loading: { color: '#fff' },
   css: [],
   plugins: [],
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/sentry'],
   axios: {},
+  sentry: {
+    config: {
+      environment: 'local',
+      release: pkg.version
+    }
+  },
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
